@@ -1,0 +1,19 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  subtitle: "These are the heroes who are donating to help Japan."
+  you_too: "You can be one too!"
+  whats_this: "What's this?"
+  whats_this_title: "What's This?"
+  whats_this_text: "You're seeing donation-related tweets in real-time as they are posted. These are the heroes who have helped Japan in this time of despair. We cannot thank you enough!"
+  have_you_donated: "Have You Donated?"
+  its_easy: "It's easy. Now you're a hero!"
+  help_translate: "Help me translate"
+  help_translate_title: "Please help me translate."
+  help_translate_text: "I'd like this page to be seen by as many people as possible. If you speak two or more languages, please help out by "
+  help_translate_link: "providing translations!"
+  realtime: "Real-time"
+  paused: "Paused"
+  wserror: "Connection lost. Please reload."
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+	<head>
+		<meta charset="utf-8"/>
+        <title>Donatter! - <%=I18n.t(:subtitle)%></title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/colorbox.css" />
+		<script type="text/javascript" src="javascripts/swfobject.js"></script>
+		<script type="text/javascript" src="javascripts/web_socket.js"></script>
+		<script type="text/javascript" src="javascripts/jquery.js"></script>
+		<script type="text/javascript" src="javascripts/jquery-ui.js"></script>
+		<script type="text/javascript" src="javascripts/jquery.colorbox.js"></script>
+		<script type="text/javascript" src="javascripts/donatter.js"></script>
+        <script type="text/javascript">
+          var messages = {
+            "realtime": "<%=I18n.t(:realtime)%>",
+            "paused": "<%=I18n.t(:paused)%>",
+            "wserror": "<%=I18n.t(:wserror)%>"
+          };
+        </script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<h1>Donatter!</h1>
+                <h2><%=I18n.t(:subtitle)%></h2>
+				<div class="donate">
+                  <a href="https://american.redcross.org/site/Donation2?idb=0&5052.donation=form1&df_id=5052"><%=I18n.t(:you_too)%></a>
+				</div>
+			</div>
+			<div id="details">
+              <a href="#whats-this" id="open-whats-this"><%=I18n.t(:whats_this)%></a><span class="sep">|</span>
+              <a href="#help-translate" id="open-help-translate"><%=I18n.t(:help_translate)%></a>
+				<div id="ws-status">
+                  <img src="images/bullet_blue.png" alt="stream status" width="16" height="16"/><span><%=I18n.t(:realtime)%></span>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div id="content">
+              <div id="tweets">
+                <% @tweets.each do |tw| -%>
+                  <div class="tweet">
+                    <div class="profile_image"><a href="http://twitter.com/<%=tw.screen_name%>"><img src="<%=tw.profile_image_url%>" alt="<%=tw.screen_name%>" width="46" height="46"/></a></div>
+                    <div class="screen_name"><a href="http://twitter.com/<%=tw.screen_name%>"><%=tw.screen_name%></a></div>
+                    <div class="text"><%=tw.text%></div>
+                    <div class="clear"></div>
+                  </div>
+                <% end -%>
+              </div>
+			</div>
+			<div id="footer">
+				Created by <a href="http://twitter.com/merikonjatta">@merikonjatta</a> (Feedback welcome)<br />
+                Powered by 
+                <ul>
+                  <li><a href="http://dev.twitter.com/pages/streaming_api">Twitter Streaming API</a></li>
+                  <li><a href="http://www.ruby-lang.org">Ruby</a></li>
+                  <li><a href="http://rubyonrails.org/">Rails</a></li>
+                  <li><a href="https://github.com/voloko/twitter-stream">twitter-stream</a></li>
+                  <li><a href="https://github.com/igrigorik/em-websocket">em-websocket</a></li>
+                  <li><a href="https://github.com/gimite/web-socket-js">web-socket-js</a></li>
+                  <li>and <a href="http://www.famfamfam.com/lab/icons/silk/">FamFamFam</a>.</li>
+                </ul>
+			</div>
+		</div>
+
+
+		<div style="display:none;">
+			<div class="detailbox" id="whats-this">
+                <h3><%=I18n.t(:whats_this_title)%></h3>
+                <%=I18n.t(:whats_this_text)%>
+
+                <h3><%=I18n.t(:have_you_donated)%></h3>
+                <a href="https://american.redcross.org/site/Donation2?idb=0&5052.donation=form1&df_id=5052"><%=I18n.t(:its_easy)%></a>
+			</div>
+
+			<div class="detailbox" id="help-translate">
+                <h3><%=I18n.t(:help_translate_title)%></h3>
+                <%=I18n.t(:help_translate_text)%>
+                <a href="https://spreadsheets.google.com/ccc?key=0Ask4zJlSGarmdFQ2U2RaM0JWTlVadll5eHFlYTc3aHc&hl=en"><%=I18n.t(:help_translate_link)%></a>
+			</div>
+		</div>
+
+	</body>
+</html>

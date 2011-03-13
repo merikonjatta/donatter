@@ -1,0 +1,15 @@
+defaults: &defaults
+  available_locales:
+    - en
+    - ja
+  twitter_auth: <%=IO.read(File.join(Rails.root, 'config', 'twitter_auth'))%>
+
+development:
+  <<: *defaults
+  neat_setting: 800
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

@@ -1,0 +1,19 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ja:
+  subtitle: "寄付で日本を救うヒーローたち"
+  you_too: "あなたもヒーロー！"
+  whats_this: "これは何？"
+  whats_this_title: "これは何？"
+  whats_this_text: "寄付・募金に関するつぶやきがリアルタイムで表示されます。一つ一つは小さくても、日本を立ち直らせるパワーです。本当にありがとう！"
+  have_you_donated: "もう寄付しましたか？"
+  its_easy: "まだの方はこちらから！"
+  help_translate: "翻訳のお願い"
+  help_translate_title: "このページを翻訳しませんか？"
+  help_translate_text: "世界中のより多くの方に見ていただくため、バイリンガル・マルチリンガルの方はぜひ"
+  help_translate_link: "翻訳を手伝ってください。"
+  realtime: "リアルタイム"
+  paused: "一時停止"
+  wserror: "切断されました。リロードしてみてください。"
+
