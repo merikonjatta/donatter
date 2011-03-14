@@ -57,3 +57,6 @@ a:hover           { color:#A0582C; text-decoration:underline; }
 #locales li.current a:link,
 #locales li.current a:visited { color:#FFFFFF; }
 #locales li.current a:hover   { color:#FFFFFF; }
+
+#social { position:absolute; top:20px; left:20px; text-align:left; }
+#social div { margin:5px 0px; }
