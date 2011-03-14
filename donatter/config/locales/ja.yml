@@ -16,4 +16,6 @@ ja:
   realtime: "リアルタイム"
   paused: "一時停止"
   wserror: "切断されました。リロードしてみてください。"
-
+  locales:
+    en: "英語"
+    ja: "日本語"

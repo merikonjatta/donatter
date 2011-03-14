@@ -64,6 +64,18 @@
 		</div>
 
 
+        <ul id="locales">
+          <% Settings.available_locales.each do |loc| -%>
+            <li<%=raw (I18n.locale.to_s==loc) ? ' class="current"' : ''%>>
+              <a href="?locale=<%=loc%>">
+                <img src="images/flags/<%=loc%>.gif" alt="flag" width="16" height="11"/>
+                <%=t 'locales.'+loc %>
+              </a>
+            </li>
+          <% end -%>
+        </ul>
+
+
 		<div style="display:none;">
 			<div class="detailbox" id="whats-this">
                 <h3><%=I18n.t(:whats_this_title)%></h3>

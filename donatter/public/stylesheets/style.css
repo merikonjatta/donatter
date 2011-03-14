@@ -45,5 +45,15 @@ a:hover           { color:#A0582C; text-decoration:underline; }
 .tweet .screen_name   { width:450px; float:left; margin:10px 10px 0px 0px; }
 .tweet .text          { width:450px; float:left; margin:0px 10px 10px 0px; }
 
-
 .detailbox { text-align:left; }
+
+
+#locales { position:absolute; top:20px; right:20px; list-style:none; text-align:left;
+           padding:0px; margin:0px; background:#E4EDEE; font-size:13px;
+           -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+#locales li { padding:3px 5px; }
+#locales li.current { background:#0A6C84; color:#FFFFFF; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+
+#locales li.current a:link,
+#locales li.current a:visited { color:#FFFFFF; }
+#locales li.current a:hover   { color:#FFFFFF; }

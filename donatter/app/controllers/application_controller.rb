@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     if params[:locale]
-      I18n.locale = params[:locale] if Settings.available_locales.include? :locale
+      I18n.locale = params[:locale] if Settings.available_locales.include? params[:locale]
     else
       accept_langs = request.headers['HTTP_ACCEPT_LANGUAGE'].split(',').map!{ |l| l.split('-')[0].split(';')[0] }
       accept_langs.each do |lang|
@@ -14,6 +14,6 @@ class ApplicationController < ActionController::Base
         end
       end
     end
-
   end
+
 end

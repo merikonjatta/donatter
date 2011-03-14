@@ -16,4 +16,7 @@ en:
   realtime: "Real-time"
   paused: "Paused"
   wserror: "Connection lost. Please reload."
+  locales:
+    en: "English"
+    ja: "Japanese"
 
