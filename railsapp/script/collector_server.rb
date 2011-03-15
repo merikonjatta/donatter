@@ -15,5 +15,6 @@ track_words = [
   '寄付',
   '募金',
   '義援金',
+  'helpjapan'
 ]
 TwitterStreamRelayServer.new(track_words).start
