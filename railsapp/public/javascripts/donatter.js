@@ -6,6 +6,7 @@ WEB_SOCKET_DEBUG = true;
 		var ws;
 
 $(document).ready(function(){
+    var ws_server = "ws://paduntu:10081/"
 
     // Element event handlers
     $("#open-whats-this").colorbox({width:"50%", inline:true, href:"#whats-this"});
@@ -45,7 +46,7 @@ $(document).ready(function(){
 
     // Connect to Web Socket.
     // Change host/port here to your own Web Socket server.
-    ws = new WebSocket("ws://paduntu:10081/");
+    ws = new WebSocket(ws_server);
 
     ws.onmessage = function(e) {
       if (!update_paused){
